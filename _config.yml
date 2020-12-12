@@ -129,7 +129,7 @@ comment:
     repo:
     owner:
     admin:
-    id: location.href # 解决 gitalk id 太长（不能超过50个字符）
+    id: location.href 
     distractionFreeMode: false
     # en | zh-CN | zh-TW
     language: navigator.language || navigator.userLanguage
