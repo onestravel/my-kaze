@@ -130,7 +130,7 @@ comment:
     repo: onestravel.github.io
     owner: onestravel
     admin: onestravel
-    id: md5(location.href)
+    id: location.href
     distractionFreeMode: true
     # en | zh-CN | zh-TW
     language: navigator.language || navigator.userLanguage
