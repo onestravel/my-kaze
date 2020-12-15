@@ -14,8 +14,8 @@
   <% if(theme.og.url) { %>
   <meta property="og:url" content="<%= url %>">
   <% } %>
-  <% if(theme.og.image && (page.banner_img || theme.author_img)) { %>
-  <meta property="og:img" content="<%= page.banner_img || theme.author_img %>">
+  <% if(theme.og.image && (page.img || page.image || theme.author_img)) { %>
+  <meta property="og:img" content="<%= page.img  || page.image || theme.author_img %>">
   <% } %>
   <% if(theme.og.description && (page.excerpt || theme.description || config.description)) { %>
   <meta property="og:img" content="<%= page.excerpt || theme.description || config.description %>">

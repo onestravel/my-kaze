@@ -1,10 +1,10 @@
 #------------------------
 # Header config
-title: 一个人的旅行
-author: 一个人的旅行
-logo_img: /favicon.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
-author_img: /medias/avatar.jpg
-author_description: 冰冻三尺，非一日之寒；为山九仞，岂一日之功；不忘初心，方得始终！
+title: theme-kaze demo
+author: theme-kaze
+logo_img: /img/Kaze.png # put the logo on the ${blog_path}/source/img/${picname}.png or use urls
+author_img: /img/Kaze.png
+author_description: designed by theme-kaze
 #------------------------
 # Navbar config
 #------------------------
@@ -14,14 +14,13 @@ menus:
   tags: /tags
   categories: /categories
   about: /about
-  friends: /friends
+  friends: /links
   # artitalk: /shuoshuo # You can uncomment to add this route
 
 about:
-  description: 冰冻三尺，非一日之寒；为山九仞，岂一日之功；不忘初心，方得始终！
+  description: description
   social_links:
-    - { icon: icon-github, link: https://github.com/onestravel }
-    - { icon: icon-mail, link: mailto:service@onestravel.cn }
+    # - { icon: icon, link: your link }
 
 #------------------------
 # Links
@@ -77,14 +76,14 @@ footer:
   #------------------------
   # Record config
   # please put the gov image in ${yoursite}/img/beian.png
-  RecordInfo: "京ICP备20009541号" # your Record info such as '某ICP备xxx号'
+  RecordInfo: "" # your Record info such as '某ICP备xxx号'
   govRecordInfo: "" # your gov record info such as '某公网安备xxx号'
   govRecordUrl: "" # your gov record url
   #------------------------
   # pv / uv statistics config
   #------------------------
   statistics:
-    enable: true
+    enable: false
     type: busuanzi # now version only supports busuanzi
     pv:
       enable: true
@@ -105,8 +104,8 @@ scrollUpAnimation: true
 # comment config
 #------------------------
 comment:
-  enable: true
-  type: gitalk  # valine | gitalk | livere | disqus | we recommend valine
+  enable: false
+  type: valine # valine | gitalk | livere | disqus | we recommend valine
   # gitalk config details can see in https://github.com/gitalk/gitalk/blob/master/readme-cn.md
   valine:
     appId:
@@ -125,13 +124,13 @@ comment:
     enableQQ: false
     requiredFields: []
   gitalk:
-    clientID: a52a65db0a634019e27f
-    clientSecret: a04eaebc103e73d3769221171a4b87b55b39998d
-    repo: onestravel.github.io
-    owner: onestravel
-    admin: onestravel
-    id: location.href
-    distractionFreeMode: true
+    clientID:
+    clientSecret:
+    repo:
+    owner:
+    admin:
+    id: md5(location.href) # 解决 gitalk id 太长（不能超过50个字符）
+    distractionFreeMode: false
     # en | zh-CN | zh-TW
     language: navigator.language || navigator.userLanguage
     labels: ['Gitalk']
@@ -145,8 +144,8 @@ comment:
 # choose true to use latex by mathjax or katex
 # warning: latex rendering will put lots of loading burden on page loading
 latex:
-  enable: true
-  engine: katex # mathjax | katex
+  enable: false
+  engine: mathjax # mathjax | katex
   # for better rendering effect, when you choose mathjax, you can use it directly but you will lose some effect
   # so you can use hexo-renderer-kramed
   # when you choose katex, you must use hexo-renderer-markdown-it-plus or other render engine
@@ -169,16 +168,16 @@ lightbox:
 # we support eight highlight themes, you can go to prism website (https://prismjs.com) for more information
 # theme: default | coy | dark | funky | okaidia | solarizedlight | tomorrow | twilight
 prism:
-  theme: tomorrow
+  theme:
 # show the number of words in posts
 wordcount:
   enable: true
 # Analytics config
 analytics:
-  enable: true
+  enable: false
   type: google # google
   google:
-    id: UA-145377665-1 # you can see more information in https://analytics.google.com/
+    id: # you can see more information in https://analytics.google.com/
 # Doc：https://artitalk.js.org/
 artitalk:
   enable: false
@@ -195,11 +194,6 @@ minify:
   css: true
   js: true
   html: true
-
-article:
-  autoSummary:
-    length: 150
-
 #------------------------
 # theme design config
 #------------------------
@@ -229,7 +223,7 @@ font:
 # cdn config
 #------------------------
 cdn:
-  # mathjax: //cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js
+  mathjax: //cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-svg.js
   katex: //cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css
   gitalk:
     css: //cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css
